@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Heaven Meeting" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_added"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/meeting_time_bg"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/author_name"
+            app:layout_constraintTop_toBottomOf="@+id/author_name"
+            tools:text="8:00 - 9:30" />
+
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="#777E7A"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/date_added"
+            app:layout_constraintTop_toBottomOf="@id/date_added"
+            tools:text="Discussion of tasks with the client." />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#5F99DF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quote"
+            tools:text="All memebers" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/firstAvatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_face_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/quote"
+            app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/secondAvatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_face_two"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/firstAvatar"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/firstAvatar" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_face_two"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/secondAvatar"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/secondAvatar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="55dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="80dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
